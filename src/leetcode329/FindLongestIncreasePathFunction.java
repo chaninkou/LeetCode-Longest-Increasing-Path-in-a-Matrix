@@ -25,7 +25,7 @@ public class FindLongestIncreasePathFunction {
 	}
 
 	private int dfs(int[][] matrix, int i, int j, int[][] longest) {
-		// If not 0, there is already a max we found
+		// If not 0 by default, we already replaced it with our max
 		if (longest[i][j] != 0) {
 			return longest[i][j];
 		}
@@ -38,7 +38,7 @@ public class FindLongestIncreasePathFunction {
 			int x = i + dir[0];
 			int y = j + dir[1];
 
-			// Case testing
+			// Condition to skip if not met
 			if (x < 0 || x >= matrix.length || y < 0 || y >= matrix[0].length || matrix[x][y] <= matrix[i][j]){
 				continue;
 			}
