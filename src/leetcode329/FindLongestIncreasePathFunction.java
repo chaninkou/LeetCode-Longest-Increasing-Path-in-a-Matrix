@@ -2,7 +2,7 @@ package leetcode329;
 
 public class FindLongestIncreasePathFunction {
 	// direction of 4 sides
-	private int[][] direction = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+	private int[][] fourDirection = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 
 	public int longestIncreasingPath(int[][] matrix) {
 		if (matrix.length == 0 || matrix == null) {
@@ -33,7 +33,7 @@ public class FindLongestIncreasePathFunction {
 		// Always at least one max
 		int max = 1;
 	
-		for (int[] dir : direction) {
+		for (int[] dir : fourDirection) {
 			// i and j will be what element we are on
 			int x = i + dir[0];
 			int y = j + dir[1];
