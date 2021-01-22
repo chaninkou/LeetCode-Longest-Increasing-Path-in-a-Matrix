@@ -49,7 +49,7 @@ public class FindLongestIncreasePathFunction {
 			max = Math.max(max, len);
 		}
 
-		// Replace 0 with the best max we found
+		// Replace 0 with the largest max we found
 		longest[i][j] = max;
 
 		return max;
